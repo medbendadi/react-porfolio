@@ -8,7 +8,6 @@ import { images } from '../../constants'
 
 import AppWrapp from '../../wrapper/AppWrapp'
 
-import CanvasLayer from './CanvasLayer/CanvasLayer'
 
 const scaleVariants = {
   whileInView: {
