@@ -1,9 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react'
 import Lottie from 'react-lottie'
-import { gsap } from "gsap";
 
 
-import SuccessLottie from '../../assets/lotties/successLottie'
+import SuccessLottie from '../../assets/lotties/blueLottie.json'
 
 
 

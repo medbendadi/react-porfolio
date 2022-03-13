@@ -35,9 +35,9 @@ function Footer() {
   
 
   const handelSubmit = () => {
-    TweenMax.to(formSuccess, { y: 40, opacity: 0, stagger: 0.05, ease: 'Circ.easeOut' })
-    TweenMax.to(footerCards, { opacity: 0, stagger: 0.05, ease: 'Circ.easeOut' }, "-=0.4")
-    TweenMax.to(h2, { opacity: 1, duration:2,y:20 ,ease: 'Circ.easeOut' }, "-=0.4")
+    TweenMax.to(formSuccess.current, { y: 40, opacity: 0, stagger: 0.05, ease: 'Circ.easeOut' })
+    TweenMax.to(footerCards.current, { opacity: 0, stagger: 0.05, ease: 'Circ.easeOut' }, "-=0.4")
+    TweenMax.to(h2.current, { opacity: 1, duration:2,y:20 ,ease: 'Circ.easeOut' }, "-=0.4")
     
     setLoading(true)
 
@@ -63,7 +63,7 @@ function Footer() {
         <>
         <h2 className='head-text'>Take a Coffee and chat With me </h2>
 
-        <div className='app__footer-cards' ref={el => (footerCards = el)}>
+        <div className='app__footer-cards' ref={footerCards}>
           <div className='app__footer-card'>
             <img src={images.email} alt="email" />
             <a href="mailto:itsbendadi@gmail.com" className='p-text'>itsbendadi@gmail.com</a>
@@ -73,7 +73,7 @@ function Footer() {
             <a href="tel: +212658242188" className='p-text'>+212658242188</a>
           </div>
         </div>
-        <div className='app__footer-form seq app__flex' ref={el => (formSuccess = el)}>
+        <div className='app__footer-form seq app__flex' ref={formSuccess}>
         <div className='app__flex'>
           <input className='p-text' type="text" placeholder='Your Name' name='name' value={name} onChange={handleChangeInput} />
         </div>
@@ -89,7 +89,7 @@ function Footer() {
       :
       
         <div className='app__footer-form-success'>
-          <p className='head-text form-success-title' ref={el => (h2 = el)}>Succeeded !</p>
+          <p className='head-text form-success-title' ref={h2}>Succeeded !</p>
           <LottieEl player={isFormSubmitted}/>
         </div>
       }
