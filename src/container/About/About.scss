@@ -1,0 +1,63 @@
+
+
+
+.app__profiles-title{
+   margin-top: 3rem;
+   font-size: 1.75rem !important;
+}
+
+.app__about {
+   flex: 1;
+   background-color: #A58FAA;
+   width: 100%;
+   flex-direction: column;
+}
+
+
+.app__profiles{
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   margin-top: 2rem;
+   
+   div{
+      .p-text{
+         color:#FFE8FF;
+      }
+      .bold-text {
+         color:#f9f9f9;
+      }
+      
+   }
+}
+
+h2.head-text.app__profiles-title {
+   color: #A6D6D6;
+}
+
+.app__profile-item{
+   width: 190px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   flex-direction: column;
+   margin: 2rem;
+
+   img{
+      width: 200px;
+      height: 140px;
+      border-radius: 16px;
+      object-fit: cover;
+   }
+
+   @media screen and (min-width:2000px) {
+      width: 370px;
+      margin: 2rem 4rem;
+
+      img{
+         height: 320px;
+      }
+   }
+}
+
